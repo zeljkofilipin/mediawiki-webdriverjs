@@ -14,7 +14,7 @@ An example repository on how to implement Selenium tests in Node.js using Mocha.
 
 ## Usage
 
-    npm test
+    npm run selenium
 
 ## Links
 

@@ -4,6 +4,7 @@
   "description": "An example repository on how to implement Selenium tests in Node.js using Mocha",
   "main": "index.js",
   "scripts": {
+    "selenium": "grunt mochaTest",
     "test": "grunt"
   },
   "repository": {
