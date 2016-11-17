@@ -14,7 +14,7 @@ An example repository on how to implement Selenium tests in Node.js using Mocha.
 
 ## Usage
 
-    ./node_modules/mocha/bin/mocha --timeout 10000
+    npm test
 
 ## Links
 
