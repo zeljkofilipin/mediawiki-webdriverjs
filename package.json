@@ -18,6 +18,7 @@
   "homepage": "https://github.com/zeljkofilipin/selenium-mediawiki-mocha#readme",
   "dependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
     "grunt-mocha-test": "^0.13.2",
     "load-grunt-tasks": "^3.5.2",
     "mocha": "^3.1.2",
