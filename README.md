@@ -20,4 +20,4 @@ An example repository on how to implement Selenium tests in Node.js using Mocha.
 
 - [Selenium/Node.js](https://www.mediawiki.org/wiki/Selenium/Node.js)
 
-TODO: Travis
+[![Build Status](https://travis-ci.org/zeljkofilipin/selenium-mediawiki-mocha.svg?branch=master)](https://travis-ci.org/zeljkofilipin/selenium-mediawiki-mocha)
