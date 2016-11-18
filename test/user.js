@@ -29,4 +29,16 @@ test.describe( 'User', function () {
 			assert( displayed );
 		} );
 	} );
+
+	test.it( 'should be able to change preferences', function () {
+		driver.get( 'http://127.0.0.1:8080/wiki/Special:UserLogin' );
+		driver.findElement( By.id( 'wpName1' ) ).sendKeys('Admin');
+		driver.findElement( By.id( 'wpPassword1' ) ).sendKeys('vagrant');
+		driver.findElement( By.id( 'wpLoginAttempt' ) ).click();
+		
+		driver.get( 'http://127.0.0.1:8080/wiki/Special:Preferences' );
+		driver.findElement( By.id( 'prefcontrol' ) ).isDisplayed().then( function ( displayed ) {
+			assert( displayed );
+		} );
+	} );
 } );
