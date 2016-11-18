@@ -29,4 +29,11 @@ test.describe( 'Page', function () {
 			assert( displayed );
 		} );
 	} );
+
+	test.it( 'should have history', function () {
+		driver.get( 'http://127.0.0.1:8080/wiki/Main_Page' );
+		driver.findElement( By.css( 'li#ca-history a' ) ).isDisplayed().then( function ( displayed ) {
+			assert( displayed );
+		} );
+	} );
 } );
