@@ -22,4 +22,11 @@ test.describe( 'User', function () {
 			assert( displayed );
 		} );
 	} );
+
+	test.it( 'should be able to log in', function () {
+		driver.get( 'http://127.0.0.1:8080/wiki/Special:UserLogin' );
+		driver.findElement( By.id( 'wpLoginAttempt' ) ).isDisplayed().then( function ( displayed ) {
+			assert( displayed );
+		} );
+	} );
 } );
