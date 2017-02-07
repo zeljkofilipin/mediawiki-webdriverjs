@@ -4,7 +4,8 @@ An example repository on how to implement Selenium tests in Node.js using Mocha.
 
 ## Prerequisites
 
-- [Firefox 47.0.1](https://ftp.mozilla.org/pub/firefox/releases/47.0.1/)
+- [Chrome](https://www.google.com/chrome/)
+- [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
 - [Node.js](https://nodejs.org/en/)
 - [MediaWiki-Vagrant](https://www.mediawiki.org/wiki/MediaWiki-Vagrant)
 
