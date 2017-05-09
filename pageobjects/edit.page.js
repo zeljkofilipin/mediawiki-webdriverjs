@@ -1,7 +1,9 @@
 // thanks to https://watirmelon.blog/2015/10/30/webdriverjs-mocha-part-3-page-objects/
-var webdriver = require( 'selenium-webdriver' );
+var webdriver = require( 'selenium-webdriver' ),
+	config = require( 'config' ),
+	baseUrl = config.get( 'baseUrl' );
 
-function EditPage( driver, baseUrl ) {
+function EditPage( driver ) {
 	this.driver = driver;
 	this.baseUrl = baseUrl;
 }
