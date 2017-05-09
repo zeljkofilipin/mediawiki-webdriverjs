@@ -18,6 +18,7 @@ test.describe( 'Page', function () {
 		content = Math.random().toString();
 		driver = helper.browser();
 		name = Math.random().toString();
+		editPage = new EditPage( driver );
 	} );
 
 	test.afterEach( function () {
@@ -28,7 +29,6 @@ test.describe( 'Page', function () {
 	test.it( 'should be creatable', function () {
 
 		// create
-		editPage = new EditPage( driver );
 		editPage.visit( name );
 		driver.findElement( By.css( '#wpTextbox1' ) ).sendKeys( content );
 		driver.findElement( By.css( '#wpSave' ) ).click();
@@ -50,7 +50,6 @@ test.describe( 'Page', function () {
 		let content2 = Math.random().toString();
 
 		// create
-		editPage = new EditPage( driver );
 		editPage.visit( name );
 		driver.findElement( By.css( '#wpTextbox1' ) ).sendKeys( content );
 		driver.findElement( By.css( '#wpSave' ) ).click();
@@ -71,7 +70,6 @@ test.describe( 'Page', function () {
 	test.it( 'should have history', function () {
 
 		// create
-		editPage = new EditPage( driver );
 		editPage.visit( name );
 		driver.findElement( By.css( '#wpTextbox1' ) ).sendKeys( content );
 		driver.findElement( By.css( '#wpSave' ) ).click();
