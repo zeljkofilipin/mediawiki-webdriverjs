@@ -2,6 +2,7 @@
 var assert = require( 'assert' ),
 	config = require( 'config' ),
 	baseUrl = config.get( 'baseUrl' ),
+	EditPage = require( '../pageobjects/edit.page.js' ),
 	webdriver = require( 'selenium-webdriver' ),
 	By = webdriver.By,
 	test = require( 'selenium-webdriver/testing' );
@@ -10,6 +11,7 @@ test.describe( 'Page', function () {
 
 	let content,
 		driver,
+		editPage,
 		helper = require( './helper' ),
 		name;
 
@@ -27,7 +29,8 @@ test.describe( 'Page', function () {
 	test.it( 'should be creatable', function () {
 
 		// create
-		driver.get( baseUrl + name + '&action=edit' );
+		editPage = new EditPage( driver, baseUrl );
+		editPage.visit( name );
 		driver.findElement( By.css( '#wpTextbox1' ) ).sendKeys( content );
 		driver.findElement( By.css( '#wpSave' ) ).click();
 
@@ -48,12 +51,13 @@ test.describe( 'Page', function () {
 		let content2 = Math.random().toString();
 
 		// create
-		driver.get( baseUrl + name + '&action=edit' );
+		editPage = new EditPage( driver, baseUrl );
+		editPage.visit( name );
 		driver.findElement( By.css( '#wpTextbox1' ) ).sendKeys( content );
 		driver.findElement( By.css( '#wpSave' ) ).click();
 
 		// edit
-		driver.get( baseUrl + name + '&action=edit' );
+		editPage.visit( name );
 		driver.findElement( By.css( '#wpTextbox1' ) ).clear();
 		driver.findElement( By.css( '#wpTextbox1' ) ).sendKeys( content2 );
 		driver.findElement( By.css( '#wpSave' ) ).click();
@@ -68,7 +72,8 @@ test.describe( 'Page', function () {
 	test.it( 'should have history', function () {
 
 		// create
-		driver.get( baseUrl + name + '&action=edit' );
+		editPage = new EditPage( driver, baseUrl );
+		editPage.visit( name );
 		driver.findElement( By.css( '#wpTextbox1' ) ).sendKeys( content );
 		driver.findElement( By.css( '#wpSave' ) ).click();
 
