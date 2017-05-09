@@ -1,4 +1,3 @@
-/* eslint-env es6, mocha, node */
 var assert = require( 'assert' ),
 	config = require( 'config' ),
 	baseUrl = config.get( 'baseUrl' ),

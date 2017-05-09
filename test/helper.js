@@ -1,4 +1,3 @@
-/* eslint-env es6, node */
 var config = require( 'config' ),
 	webdriver = require( 'selenium-webdriver' );
 

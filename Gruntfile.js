@@ -5,20 +5,12 @@ module.exports = function ( grunt ) {
 	// Project configuration.
 	grunt.initConfig( {
 
-		// Configure a jscs task
-		jscs: {
-			src: [ 'Gruntfile.js', 'test/**/*.js' ],
-			options: {
-				config: '.jscsrc'
-			}
-		},
-
-		// Configure a jshint task
-		jshint: {
-			all: [ 'Gruntfile.js', 'test/**/*.js' ],
-			options: {
-				jshintrc: '.jshintrc'
-			}
+		// Configure ESLint task
+		eslint: {
+			all: [
+				'**/*.js',
+				'!node_modules/**'
+			]
 		},
 
 		// Configure a mochaTest task
@@ -35,6 +27,6 @@ module.exports = function ( grunt ) {
 	} );
 
 	// Default task(s).
-	grunt.registerTask( 'default', [ 'jscs', 'jshint' ] );
+	grunt.registerTask( 'default', [ 'eslint' ] );
 
 };
